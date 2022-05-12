@@ -1,0 +1,7 @@
+@use 'base/base.scss' as *;
+
+body {
+    min-height: 100vh;
+    font-family: $font-family;
+    background-color: $bgcolor-body;
+}
