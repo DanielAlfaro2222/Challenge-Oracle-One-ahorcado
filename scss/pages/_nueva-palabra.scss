@@ -1,0 +1,32 @@
+@use '../helpers/placeholder' as *;
+@use '../config/config' as *;
+
+.container-section-new-word {
+    width: 100%;
+
+    &__link,
+    &__btn {
+        @extend %btn-movil;
+    }
+
+    &__btn {
+        @extend %btn-bg-color-blue;
+    }
+
+    &__link {
+        @extend %btn-bg-color-white;
+    }
+}
+
+.container-form-new-word__textarea {
+    width: 100%;
+    resize: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    border: none;
+    color: $bgcolor-bottom-blue;
+
+    &:focus {
+        outline: none;
+    }
+}

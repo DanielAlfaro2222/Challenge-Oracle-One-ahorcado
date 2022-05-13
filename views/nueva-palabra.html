@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/images/Vector.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/Vector.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://res.cloudinary.com/dpxek6oka/raw/upload/v1643485116/normalize_ej2ndq.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,32 +16,43 @@
 </head>
 
 <body>
-    <header>
+    <header class="container-header">
         <a href="../index.html">
-            <img src="../assets/images/Vector.webp" alt="">
+            <img src="../assets/images/Vector.webp" alt="Logo alura" decoding="async" loading="lazy">
         </a>
     </header>
 
-    <main>
-        <section>
-            <form>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese una palabra"></textarea>
+    <main class="container-main">
+        <section class="container-section-new-word">
+            <form class="container-form-new-word">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese una palabra"
+                    class="container-form-new-word__textarea" autofocus="true"></textarea>
             </form>
 
             <p>
-                <i class="fa-solid fa-circle-info"></i>
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
                 Máx. de 8 letras
             </p>
 
-            <button>Guardar y empezar</button>
-            <a href="../index.html">Cancelar</a>
+            <p>
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                Puedes agregar mas de una palabra separandolas por un espacio
+            </p>
+
+            <button class="container-section-new-word__btn">
+                Guardar y empezar juego
+            </button>
+            <a href="../index.html" class="container-section-new-word__link">
+                Cancelar
+            </a>
         </section>
     </main>
 
-    <footer>
-        <p>
+    <footer class="container-footer">
+        <p class="container-paragraph-footer">
             &copy; Diseñado por
-            <a href="https://github.com/DanielAlfaro2222?tab=repositories" target="_blank" rel="noopener">
+            <a href="https://github.com/DanielAlfaro2222?tab=repositories" target="_blank" rel="noopener"
+                class="container-paragraph-footer__link">
                 Daniel Alfaro
             </a> 2022
         </p>

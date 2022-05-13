@@ -1,0 +1,19 @@
+@use '../helpers/placeholder' as *;
+@use '../config/config' as *;
+
+.container-article-options {
+    width: 100%;
+
+    &__link,
+    &__btn {
+        @extend %btn-movil;
+    }
+
+    &__btn {
+        @extend %btn-bg-color-blue;
+    }
+
+    &__link {
+        @extend %btn-bg-color-white;
+    }
+}

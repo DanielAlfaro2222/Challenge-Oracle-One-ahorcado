@@ -1,0 +1,18 @@
+@use './mixin' as *;
+@use '../config/config' as *;
+
+%btn-movil {
+    @include button-mixin();
+    margin-top: 1.3em;
+}
+
+%btn-bg-color-blue {
+    color: white;
+    background-color: $bgcolor-bottom-blue;
+}
+
+%btn-bg-color-white {
+    color: $bgcolor-bottom-blue;
+    border: 1px solid $bgcolor-bottom-blue;
+    background-color: transparent;
+}

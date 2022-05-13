@@ -1,7 +1,12 @@
-@use 'base/base.scss' as *;
+@use 'config/config' as *;
+@use 'base/base' as *;
 
-body {
-    min-height: 100vh;
-    font-family: $font-family;
-    background-color: $bgcolor-body;
-}
+/* Bloques */
+@use 'blocks/header' as *;
+@use 'blocks/main' as *;
+@use 'blocks/footer' as *;
+
+/* Paginas */
+@use 'pages/index' as *;
+@use 'pages/nueva-palabra' as *;
+@use 'pages/juego' as *;

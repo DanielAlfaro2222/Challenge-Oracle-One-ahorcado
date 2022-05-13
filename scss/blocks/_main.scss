@@ -1,0 +1,8 @@
+@use '../helpers/mixin' as *;
+
+.container-main {
+    @include flex-mixin($flex-direction: column, $justify-content: center, $align-items: center);
+    width: 100%;
+    height: calc(100vh - 70px - 74.78px);
+    padding: 0 1.4em 1.4em 1.4em;
+}

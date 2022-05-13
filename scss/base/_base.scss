@@ -1,0 +1,9 @@
+@use '../config/config' as *;
+@use '../helpers/mixin' as *;
+
+body {
+    @include flex-mixin($flex-direction: column);
+    min-height: 100vh;
+    font-family: $font-family;
+    background-color: $bgcolor-body;
+}

@@ -1,0 +1,35 @@
+@use '../config/config' as *;
+
+@mixin button-mixin($display: block, $width: 100%, $height: 48px, $font-size: 1rem) {
+    display: $display;
+    width: $width;
+    height: $height;
+    font-size: $font-size;
+    border: none;
+    outline: none;
+    border-radius: 1em;
+    font-weight: 590;
+    text-align: center;
+    line-height: $height;
+    cursor: pointer;
+}
+
+@mixin flex-mixin($flex-direction: row, $justify-content: initial, $align-items: initial, $flex-wrap: nowrap) {
+    display: flex;
+
+    @if $flex-direction  !=row {
+        flex-direction: $flex-direction;
+    }
+
+    @if $flex-wrap  !=nowrap {
+        flex-wrap: $flex-wrap;
+    }
+
+    @if $justify-content  !=initial {
+        justify-content: $justify-content;
+    }
+
+    @if $align-items  !=initial {
+        align-items: $align-items;
+    }
+}

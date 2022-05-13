@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/images/Vector.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/Vector.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://res.cloudinary.com/dpxek6oka/raw/upload/v1643485116/normalize_ej2ndq.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,29 +15,34 @@
 </head>
 
 <body>
-    <header>
+    <header class="container-header">
         <a href="../index.html">
-            <img src="../assets/images/Vector.webp" alt="">
+            <img src="../assets/images/Vector.webp" alt="Logo alura" decoding="async" loading="lazy">
         </a>
     </header>
 
-    <main>
-        <section>
+    <main class="container-main">
+        <section class="container-section-game">
             <article>
                 <canvas></canvas>
             </article>
 
-            <article>
-                <button>Nuevo juego</button>
-                <button>Desistir</button>
+            <article class="container-article-options-game">
+                <button class="container-article-options-game__btn">
+                    Nuevo juego
+                </button>
+                <button class="container-article-options-game__link">
+                    Desistir
+                </button>
             </article>
         </section>
     </main>
 
-    <footer>
-        <p>
+    <footer class="container-footer">
+        <p class="container-paragraph-footer">
             &copy; Diseñado por
-            <a href="https://github.com/DanielAlfaro2222?tab=repositories" target="_blank" rel="noopener">
+            <a href="https://github.com/DanielAlfaro2222?tab=repositories" target="_blank" rel="noopener"
+                class="container-paragraph-footer__link">
                 Daniel Alfaro
             </a> 2022
         </p>
