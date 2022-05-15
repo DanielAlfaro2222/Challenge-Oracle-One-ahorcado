@@ -25,21 +25,16 @@
     <main class="container-main">
         <section class="container-section-new-word">
             <form class="container-form-new-word">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese una palabra"
+                <textarea name="" id="textarea-word" cols="30" rows="10" placeholder="Ingrese una palabra"
                     class="container-form-new-word__textarea" autofocus="true"></textarea>
             </form>
 
-            <p>
-                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <p class="container-info-new-word">
+                <i class="fa-solid fa-circle-info container-info-new-word__icon" aria-hidden="true"></i>
                 Máx. de 8 letras
             </p>
 
-            <p>
-                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-                Puedes agregar mas de una palabra separandolas por un espacio
-            </p>
-
-            <button class="container-section-new-word__btn">
+            <button class="container-section-new-word__btn" id="btn-save">
                 Guardar y empezar juego
             </button>
             <a href="../index.html" class="container-section-new-word__link">
@@ -57,6 +52,8 @@
             </a> 2022
         </p>
     </footer>
+
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

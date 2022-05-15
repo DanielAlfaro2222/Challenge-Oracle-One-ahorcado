@@ -21,19 +21,55 @@
         </a>
     </header>
 
-    <main class="container-main">
+    <main class="container-main container-main--height">
         <section class="container-section-game">
-            <article>
-                <canvas></canvas>
+            <article class="container-canvas-game">
+                <canvas width="250" height="250"></canvas>
+
+                <div class="container-word-secret" id="container-word-secret"></div>
+
+                <p>Cantidad de intentos: 10</p>
+            </article>
+
+            <article class="container-buttons-game">
+                <button id="A" class="container-buttons-game__btn">
+                    A
+                </button>
+                <button id="B" class="container-buttons-game__btn">B</button>
+                <button id="C" class="container-buttons-game__btn">C</button>
+                <button id="D" class="container-buttons-game__btn">D</button>
+                <button id="E" class="container-buttons-game__btn">E</button>
+                <button id="F" class="container-buttons-game__btn">F</button>
+                <button id="G" class="container-buttons-game__btn">G</button>
+                <button id="H" class="container-buttons-game__btn">H</button>
+                <button id="I" class="container-buttons-game__btn">I</button>
+                <button id="J" class="container-buttons-game__btn">J</button>
+                <button id="K" class="container-buttons-game__btn">K</button>
+                <button id="L" class="container-buttons-game__btn">L</button>
+                <button id="M" class="container-buttons-game__btn">M</button>
+                <button id="N" class="container-buttons-game__btn">N</button>
+                <button id="Ñ" class="container-buttons-game__btn">Ñ</button>
+                <button id="O" class="container-buttons-game__btn">O</button>
+                <button id="P" class="container-buttons-game__btn">P</button>
+                <button id="Q" class="container-buttons-game__btn">Q</button>
+                <button id="R" class="container-buttons-game__btn">R</button>
+                <button id="S" class="container-buttons-game__btn">S</button>
+                <button id="T" class="container-buttons-game__btn">T</button>
+                <button id="U" class="container-buttons-game__btn">U</button>
+                <button id="V" class="container-buttons-game__btn">V</button>
+                <button id="W" class="container-buttons-game__btn">W</button>
+                <button id="X" class="container-buttons-game__btn">X</button>
+                <button id="Y" class="container-buttons-game__btn">Y</button>
+                <button id="Z" class="container-buttons-game__btn">Z</button>
             </article>
 
             <article class="container-article-options-game">
-                <button class="container-article-options-game__btn">
+                <button class="container-article-options-game__btn" id="btn-new-game">
                     Nuevo juego
                 </button>
-                <button class="container-article-options-game__link">
+                <a href="../index.html" class="container-article-options-game__link">
                     Desistir
-                </button>
+                </a>
             </article>
         </section>
     </main>
@@ -47,6 +83,9 @@
             </a> 2022
         </p>
     </footer>
+
+    <script type="module"  src="../js/juego.js"></script>
+    <script type="module"  src="../js/canvas.js"></script>
 </body>
 
 </html>
