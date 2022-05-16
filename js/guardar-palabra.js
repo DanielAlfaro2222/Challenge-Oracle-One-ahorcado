@@ -1,4 +1,4 @@
-'use strict';
+import { listadoPalabras } from "./juego.js";
 
 // Funcionalidad para agregar una nueva palabra
 const botonGuardar = document.getElementById('btn-save');
@@ -13,4 +13,7 @@ botonGuardar.addEventListener('click', () => {
 
     listadoPalabras.push(textAreaNuevaPalabra.value.trim().toUpperCase());
     alert('La palabra se agrego con exito');
+
+    let url = window.location.origin;
+    location.href = `${url}/views/juego.html`;
 });

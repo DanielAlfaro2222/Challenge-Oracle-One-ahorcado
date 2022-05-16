@@ -1,7 +1,6 @@
-'use strict';
+export const listadoPalabras = ['HTML', 'CSS', 'JAVASCRIPT', 'JAVA', 'SASS', 'DJANGO', 'PYTHON', 'LINUX', 'WINDOWS', 'REACT', 'FLUTTER', 'ANGULAR', 'SQL', 'MYSQL', 'SCRUM', 'DENO', 'GIT'];
 
 let intentos = 10;
-const listadoPalabras = ['HTML', 'CSS', 'JAVASCRIPT', 'JAVA', 'SASS', 'DJANGO', 'PYTHON', 'LINUX', 'WINDOWS', 'REACT', 'FLUTTER', 'ANGULAR', 'SQL', 'MYSQL', 'SCRUM', 'DENO', 'GIT'];
 const contenedorPalabraSecreta = document.getElementById('container-word-secret');
 const botonNuevoJuego = document.getElementById('btn-new-game');
 
@@ -32,8 +31,12 @@ function iniciarJuego() {
     agregarHijosAlContenedor(palabraSecreta);
 }
 
-iniciarJuego();
+if (contenedorPalabraSecreta) {
+    iniciarJuego();
+}
 
-botonNuevoJuego.addEventListener('click', () => {
-    location.reload();
-});
+if (botonNuevoJuego) {
+    botonNuevoJuego.addEventListener('click', () => {
+        location.reload();
+    });
+}
