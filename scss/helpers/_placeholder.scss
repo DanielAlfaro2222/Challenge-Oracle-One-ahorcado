@@ -20,3 +20,9 @@
 %btn-game-movil {
     @include button-mixin($width: 30px, $height: 30px, $font-size: .84rem, $border-radius: .4em);
 }
+
+%btn-game-movil-deactivate {
+    @extend %btn-game-movil;
+    background-color: gray;
+    pointer-events: none;
+}

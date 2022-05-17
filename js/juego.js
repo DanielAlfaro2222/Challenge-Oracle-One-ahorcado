@@ -3,6 +3,8 @@ export const listadoPalabras = ['HTML', 'CSS', 'JAVASCRIPT', 'JAVA', 'SASS', 'DJ
 let intentos = 10;
 const contenedorPalabraSecreta = document.getElementById('container-word-secret');
 const botonNuevoJuego = document.getElementById('btn-new-game');
+const botonesJuego = document.querySelectorAll('.container-buttons-game__btn');
+const contenedorCantidadIntentos = document.getElementById('cantidad-intentos');
 
 function obtenerPalabraAleatoria(array) {
     let numeroAletorio = Math.trunc(Math.random() * (array.length - 0) + 0);
@@ -27,16 +29,42 @@ function agregarHijosAlContenedor(palabra) {
 
 function iniciarJuego() {
     let palabraSecreta = obtenerPalabraAleatoria(listadoPalabras);
-
     agregarHijosAlContenedor(palabraSecreta);
+
+    for (let boton of botonesJuego) {
+        boton.onclick = function () {
+            boton.classList.add('container-buttons-game__btn--deactivate');
+            ejecutarIntento(boton);
+        };
+    }
 }
 
 if (contenedorPalabraSecreta) {
     iniciarJuego();
 }
 
+// Recargar la pagina para iniciar un nuevo juego
 if (botonNuevoJuego) {
     botonNuevoJuego.addEventListener('click', () => {
         location.reload();
     });
+}
+
+// Actualizar la informacion en pantalla sobre la cantidad de intentos
+function actulizarContenedorCantidadIntentos(intentos) {
+
+    // Si los intentos se agotan, todos los botones quedaran deshabilitados
+    if (intentos === 0) {
+        for (let boton of botonesJuego) {
+            boton.classList.add('container-buttons-game__btn--deactivate');
+        }
+    }
+
+    return contenedorCantidadIntentos.textContent = `Cantidad intentos: ${intentos}`;
+}
+
+// Funcion para ejecutar el intento del usuario
+function ejecutarIntento(boton) {
+    intentos--;
+    actulizarContenedorCantidadIntentos(intentos);
 }
