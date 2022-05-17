@@ -5,6 +5,17 @@
 .container-section-new-word {
     width: 100%;
 
+    @include media-query(600px) {
+        max-width: 430px;
+    }
+
+    @include media-query(1200px) {
+        max-width: 500px;
+    }
+}
+
+.container-article-new-word {
+
     &__link,
     &__btn {
         @extend %btn-movil;
@@ -16,6 +27,19 @@
 
     &__link {
         @extend %btn-bg-color-white;
+    }
+
+    @include media-query(600px) {
+        @include flex-mixin($justify-content: space-between);
+
+        &__link,
+        &__btn {
+            max-width: 230px;
+        }
+    }
+
+    @include media-query(800px) {
+        column-gap: 1.2em;
     }
 }
 
@@ -42,5 +66,9 @@
     &__icon {
         margin-right: .5em;
         font-size: 1.1rem;
+    }
+
+    @include media-query(1000px) {
+        font-size: .9rem;
     }
 }

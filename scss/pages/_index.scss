@@ -1,5 +1,6 @@
 @use '../helpers/placeholder' as *;
 @use '../config/config' as *;
+@use '../helpers/mixin' as *;
 
 .container-article-options {
     width: 100%;
@@ -15,5 +16,15 @@
 
     &__link {
         @extend %btn-bg-color-white;
+    }
+
+    @include media-query(600px) {
+
+        &__link,
+        &__btn {
+            max-width: 230px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }

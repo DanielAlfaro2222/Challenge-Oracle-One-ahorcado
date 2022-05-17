@@ -4,6 +4,10 @@
 
 .container-section-game {
     width: 100%;
+
+    @include media-query(600px) {
+        max-width: 480px;
+    }
 }
 
 .container-article-options-game {
@@ -20,6 +24,15 @@
 
     &__link {
         @extend %btn-bg-color-white;
+    }
+
+    @include media-query(600px) {
+        @include flex-mixin($justify-content: space-between);
+
+        &__link,
+        &__btn {
+            max-width: 230px;
+        }
     }
 }
 
@@ -38,6 +51,12 @@
     &__btn--deactivate {
         @extend %btn-game-movil-deactivate;
     }
+
+    @include media-query(500px) {
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 .container-canvas-game {
@@ -47,6 +66,10 @@
 
 .container-main--height {
     height: auto;
+
+    @media screen and (min-width: 600px) and (min-height: 800px) {
+        height: calc(100vh - 74.78px - 70px);
+    }
 }
 
 // Estilos palabra secreta
@@ -54,6 +77,8 @@
     @include flex-mixin($justify-content: center);
     column-gap: .4em;
     color: $bgcolor-bottom-blue;
+    height: 30px;
+    margin-top: 1em;
 
     &__div {
         width: 20px;
